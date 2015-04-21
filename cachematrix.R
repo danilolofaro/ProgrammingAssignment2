@@ -1,8 +1,3 @@
-## Put comments here that give an overall description of what your
-## functions do
-
-## Write a short comment describing this function
-
 # This function, `makeCacheMatrix` creates a special "matrix", which is
 # a list containing a function to
 # 
@@ -30,7 +25,6 @@ makeCacheMatrix <- function(x = matrix()) {
 }
 
 
-## Write a short comment describing this function
 # The following function calculates the inverse of the cached "matrix"
 # created with the above function. It first checks if the
 # original matrix (from which to calculate the inverse has been changed). 
@@ -53,7 +47,7 @@ cacheSolve <- function(x, ...) {
                 if (prod(diag(x$getCM() %*% x$getInv()))!=1) {
                 message("matrix is changed")
                 }
-                else if(!is.null(inv)) {
+                else {
                         message("getting cached data")
                         return(inv)
                 }
