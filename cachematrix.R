@@ -45,7 +45,7 @@ cacheSolve <- function(x, ...) {
         # otherwise returns the cached inverse
         if(!is.null(inv)) { 
                 if (prod(diag(x$getCM() %*% x$getInv()))!=1) {
-                message("matrix is changed")
+                        message("matrix is changed")
                 }
                 else {
                         message("getting cached data")
